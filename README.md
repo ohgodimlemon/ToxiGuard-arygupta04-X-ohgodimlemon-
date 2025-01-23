@@ -33,8 +33,8 @@ Before running the bot, ensure you have the following installed:
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/yourusername/discord-toxic-message-bot.git
-cd discord-toxic-message-bot
+git clone https://github.com/arygupta04/discord_toxicity_checker_bot.git
+cd discord_toxicity_checker_bot
 ```
 
 2. **Install dependencies:**
