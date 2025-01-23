@@ -57,7 +57,7 @@ pip install -r requirements.txt
 
 4. **Model Preparation:**
 
-- Ensure that the trained models for the five categories (Toxic, Obscene, Insult, Threat, Identity Hate) are placed in the `models/` directory. These models should be saved as `.h5`, `.pkl`, or any other appropriate format depending on the framework used.
+- Ensure that the trained models for the five categories (Toxic, Obscene, Insult, Threat, Identity Hate) are placed in the `models/` directory.
 
 5. **Run the bot:**
 
@@ -87,12 +87,12 @@ Each category is checked by a separate binary classification model. If a message
 The bot uses five individual binary classification models for the five categories mentioned above. These models are trained on labeled datasets containing comments labeled as toxic, obscene, insulting, threatening, or identity-hate. The following steps are used for classification:
 
 1. Preprocess the message.
-2. Pass the message through the corresponding model.
+2. Pass the message through five trained models.
 3. Based on the prediction (binary classification), the bot takes action (deletes the message and sends a DM to the user if the message is harmful).
 
 ### Models
 
-Each model checks for a specific category of harmful content:
+Each of the five models check for a specific category of harmful content:
 
 1. **Toxic**: Identifies toxic language or behavior that promotes hostility or negativity.
 2. **Obscene**: Detects obscene or inappropriate language.
@@ -134,11 +134,6 @@ The bot uses a `config.json` file for basic configuration settings:
 
 Ensure to replace the placeholders with the actual bot token and server ID.
 
-### Performance
-Here's an updated version of your README with a new **Performance** section added, showcasing quantitative metrics and how the models perform. 
-
----
-
 ## Performance
 
 The bot's classification models are evaluated using standard performance metrics, ensuring their effectiveness in identifying harmful content across the five categories. Below are the key metrics and their interpretations:
@@ -169,26 +164,15 @@ The bot's classification models are evaluated using standard performance metrics
 2. **Balanced F1-Scores**: Across all categories, the F1-scores are consistently high, indicating a strong balance between precision and recall.
 3. **Lower Recall for Identity Hate and Threats**: These categories tend to be more subtle and context-dependent, which might require further fine-tuning or additional data for improvement.
 
-### Model Evaluation Techniques
-
-The models were evaluated using the following methods:
-- **Cross-Validation**: Ensures generalization by splitting the dataset into training and validation folds.
-- **Confusion Matrix Analysis**: Used to assess the rate of false positives and false negatives for each category.
-- **ROC-AUC Scores**: Calculated to assess the separability of positive and negative cases for each model.
-
 ### Example Dataset
 
-The models were trained and evaluated using publicly available datasets like:
+The models were trained and evaluated using publicly available dataset from Kaggle:
 - **Jigsaw Toxic Comment Classification Challenge Dataset** (Google Kaggle)
-- Custom-curated data specific to Discord communication patterns.
 
 ### Future Enhancements
 
 To improve the bot's classification accuracy:
-1. Incorporate transformer-based models like **BERT** or **RoBERTa** for more nuanced text understanding.
-2. Expand the training dataset to include more real-world Discord messages.
-3. Use transfer learning to adapt the models for domain-specific content.
+1. Fine tune the bot for racist comments
+2. Expand the training dataset to include more real-world Discord messages. Train model for detecting toxic abbreviations.
 
 ---
-
-You can refine the numbers and metrics further based on your actual results. Let me know if you need help generating visualizations for performance, like a precision-recall curve!
