@@ -153,6 +153,9 @@ The bot's classification models are evaluated using standard performance metrics
 | **Threat**     | 0.87      | 0.80   | 0.83     | 0.88     |
 | **Identity Hate** | 0.86   | 0.78   | 0.82     | 0.87     |
 
+![ToxiGuard Workflow](accuracy_loss_bar_graph.png "Bar graph to show the accuracy and loss of the models")
+
+
 ### Key Definitions
 
 - **Precision**: The proportion of correctly identified positive cases out of all predicted positive cases. Higher precision ensures fewer false positives.
