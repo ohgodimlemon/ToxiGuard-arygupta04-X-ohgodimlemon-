@@ -1,7 +1,3 @@
-Here's a structured and detailed README file template for your project:
-
----
-
 # Toxicity Detection Discord Bot
 
 This project is a Discord bot designed to detect and remove toxic, obscene, insulting, threatening, or identity-hate comments in a group chat. The bot works by monitoring messages and using machine learning models to classify them into one or more of the following categories:
@@ -137,24 +133,3 @@ The bot uses a `config.json` file for basic configuration settings:
 ```
 
 Ensure to replace the placeholders with the actual bot token and server ID.
-
-## Contribution
-
-Feel free to fork this project, submit issues, and open pull requests for improvements. Contributions are welcome!
-
-### Steps to Contribute
-
-1. Fork the repository.
-2. Clone your forked repository.
-3. Create a new branch for your feature/fix.
-4. Make the necessary changes.
-5. Test your changes.
-6. Submit a pull request with a detailed description of your changes.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to adjust or add further details as needed!
