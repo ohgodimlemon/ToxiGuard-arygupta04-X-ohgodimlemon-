@@ -49,7 +49,7 @@ pip install -r requirements.txt
 
 4. **Model Preparation:**
 
-- Make a 'models' folder, and install all the five models from Google Drive here.
+- Make a 'models' folder, and install all the five models from Google Drive [here](https://drive.google.com/drive/folders/1vhM2isy2vIQXGbn9lgH1MKcAyvqElde8).
 
 5. **Run the bot:**
 
