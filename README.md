@@ -19,14 +19,6 @@ When a message is found to contain harmful content, the bot deletes it and sends
 
 ## Installation
 
-### Prerequisites
-
-Before running the bot, ensure you have the following installed:
-
-- Python 3.8 or later
-- Discord.py library
-- Machine learning libraries (TensorFlow, PyTorch, scikit-learn, etc.)
-- The models for binary classification trained on appropriate datasets
 
 ### Setup
 
@@ -57,7 +49,7 @@ pip install -r requirements.txt
 
 4. **Model Preparation:**
 
-- Ensure that the trained models for the five categories (Toxic, Obscene, Insult, Threat, Identity Hate) are placed in the `models/` directory.
+- Make a 'models' folder, and install all the five models from Google Drive here.
 
 5. **Run the bot:**
 
