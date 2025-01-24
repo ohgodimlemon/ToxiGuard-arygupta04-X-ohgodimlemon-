@@ -87,8 +87,8 @@ python bot.py
 ## After following these steps, the bot is ready to be used!
 ## How to use this?
 
-1. **User Message**: `"You should kill yourself!"`
-2. **Bot Classification (happens under the hood)**: 
+1. **Send a toxic message**: `"You should kill yourself!"`
+2. **Bot Classification (happens under the hood, for example:)**: 
    - Toxic: Yes
    - Threat: Yes
    - Obscene: No
@@ -97,5 +97,6 @@ python bot.py
 3. **Bot Action**: 
    - Deletes the message from the group chat.
    - Sends a direct message to the user informing them why the message they've sent is toxic, i.e. in which of the 5 classifications it falls in: "Your message in general was flagged as: 'label_1','label_2'. Please adhere to the community guidelines and maintain a positive environment."
+   - However, non-toxic messages stay unaffected.
 
 ---
