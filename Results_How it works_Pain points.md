@@ -5,14 +5,7 @@
 | **Obscene**    | 99.21%    |
 | **Insult**     | 99.77%    |
 | **Threat**     | 99.37%    |
-| **Identity Hate** | 99.77$ | 
-
-### Observations
-
-# How it works
-
-
-# Pain Points and challenges
+| **Identity Hate** | 99.77% | 
 
 ### Key Definitions
 
@@ -21,8 +14,15 @@
 - **F1-Score**: The harmonic mean of precision and recall, balancing their trade-off.
 - **Accuracy**: The proportion of correctly classified messages (both positive and negative) out of all messages.
 
+### Observations
 
-### Future Enhancements
+# How it works
+
+
+# Pain Points and challenges
+
+
+# Future Enhancements
 
 To improve the bot's classification accuracy:
 1. Fine tune the bot for racist comments
