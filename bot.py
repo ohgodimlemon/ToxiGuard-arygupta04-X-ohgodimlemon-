@@ -27,7 +27,7 @@ model_paths = {
     'obscene': 'models/model_obscene_4.keras',
     'threat': 'models/model_threat_4.keras',
     'insult': 'models/model_insult_4.keras',
-    'identity hate': 'models/model_identity_hate_1.keras'
+    'identity hate': 'models/model_identity_hate_4.keras'
 }
 classifier = ToxicityClassifier(model_paths=model_paths)
 
