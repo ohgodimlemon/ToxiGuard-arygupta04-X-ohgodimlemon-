@@ -35,8 +35,8 @@ Each of the five models check for a specific category of harmful content:
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/arygupta04/discord_toxicity_checker_bot.git
-cd discord_toxicity_checker_bot
+git clone https://github.com/arygupta04/ToxiGuard.git
+cd ToxiGuard
 ```
 
 2. **Install dependencies:**
