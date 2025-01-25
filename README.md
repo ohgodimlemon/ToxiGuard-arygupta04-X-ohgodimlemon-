@@ -1,5 +1,5 @@
-# ToxiGuard: Toxicity Detection Discord Bot
-
+# ToxiGuard: Toxicity Detection Discord Bot <img src="ToxiGuard_logo.jpg" alt="ToxiGuard Logo" width="80" height="80" align="right">
+<br><br>
 ToxiGuard is a Discord bot designed to detect and remove toxic, obscene, insulting, threatening, or identity-hate comments in a group chat. The bot works by monitoring messages and using machine learning models to classify them into one or more of the following categories:
 
 1. **Toxic**
