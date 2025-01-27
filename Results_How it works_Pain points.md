@@ -17,10 +17,18 @@
 - Very good results overall!
 
 # How it works
+## Training
+1) **Preprocess the data:** First we need to have training data as 'X' and 'y', the comment and respective classifications for each label.
+2) **Text Vectorisation:** This is a Natural Language Processing project, a sub-field of machine learning. Models cannot be trained in text format, thus Tensorflow's text vectorisation is used to convert text into numerical representations. Overall, a dictinary is built of each word corresponding to a integer, this is then used to convert input sentences into integer representation.
+3) **SMOTE:** Data given is imbalanced, the SMOTE tool adds data points to balance the data for each label.
+4) **Sequential Model:**
 
 
 # Pain Points and challenges
-
+1) **Data imbalance:** We trained the model multiple times without realizing the dataset was imbalanced. As a result, we achieved high accuracy for the "toxic" label since it had the most data and was relatively balanced. However, the other labels, particularly "threat," struggled significantly. The precision for "threat" was 0, indicating the model failed to identify any true positives and classified everything as false. This occurred because only a small number of data points were labeled as "threat," and the model failed to learn meaningful patterns for this label due to the overwhelming majority of false classifications.
+2) **Removing severe_toxic label:** This label was removed, as there was no clear definition or line as to what classifies as severe_toxic and toxic. Moreover, as shown in notebook, all the severe_toxic labels were also toxic. So, we decided to drop the severe_toxic column.
+3) **Fixing data imbalance, training multiple models:** Earlier, we were training only one model to perform 5 classifications. We realised one model will not perform all classifications well, even after training for 7 epochs the accuracy remained 54%. This is perhaps because even if the model classifies one label wrong, the testing would make whole comment as false prediction. Instead what we realised we should test model for wach label. To solve this, we trained 5 seperate models, each trained to perform binary classification outputting weather a label is true or false. This gave us very high accuracy, precision, and recall, especially after applying SMOTE.
+4) **Multilabel classification:** The problem was in designing the whole solution, one option was to train just one model, which did not work as described. Second option was to have classes and train one model but this meant 2^5 classes possiblity which is ridiculous. The problem is that each comment can be classified in multiple label, thus, training 5 seperate model was the best option.
 
 # Future Enhancements
 
