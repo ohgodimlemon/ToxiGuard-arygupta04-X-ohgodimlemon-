@@ -20,8 +20,9 @@
 ## Training
 1) **Preprocess the data:** First we need to have training data as 'X' and 'y', the comment and respective classifications for each label.
 2) **Text Vectorisation:** This is a Natural Language Processing project, a sub-field of machine learning. Models cannot be trained in text format, thus Tensorflow's text vectorisation is used to convert text into numerical representations. Overall, a dictinary is built of each word corresponding to a integer, this is then used to convert input sentences into integer representation.
-3) **SMOTE:** Data given is imbalanced, the SMOTE tool adds data points to balance the data for each label.
-4) **Sequential Model:**
+3) **SMOTE:** Data given is imbalanced, the SMOTE tool adds data points to balance the data for each label. Thus, we have 5 datasets, different for each label.
+4) **Sequential Model:** We have defined a binary classification model archutecture. As discussed, five models of this type will be made for each label. There are several layers, the first embedding layer converts each word into 32 dimentional vector. The bidirectional layer is important as it can process sentences in both directions and preserve its context. For example, the sentence "I don't hate you" is not toxic, but the association of the word "hate" in embedding layer is related to toxic, the word "don't" changes the context, which is what this layer takes care of. Then we have three dense or fully connected layers with Rectified Linear Unit (ReLU) function which learns features of words. This is followed by a final layer which gives probablitistic output of true or false classification for that label.
+6) **Training and Testing:** Here, datset for each label is extracted, and then split into train, test and validation before training it. A callback is defined for saving the model after each epoch for each model. This is then tested on testing data split, and results are stored in results array.
 
 
 # Pain Points and challenges
