@@ -24,6 +24,11 @@
 4) **Sequential Model:** We have defined a binary classification model archutecture. As discussed, five models of this type will be made for each label. There are several layers, the first embedding layer converts each word into 32 dimentional vector. The bidirectional layer is important as it can process sentences in both directions and preserve its context. For example, the sentence "I don't hate you" is not toxic, but the association of the word "hate" in embedding layer is related to toxic, the word "don't" changes the context, which is what this layer takes care of. Then we have three dense or fully connected layers with Rectified Linear Unit (ReLU) function which learns features of words. This is followed by a final layer which gives probablitistic output of true or false classification for that label.
 6) **Training and Testing:** Here, datset for each label is extracted, and then split into train, test and validation before training it. A callback is defined for saving the model after each epoch for each model. This is then tested on testing data split, and results are stored in results array.
 
+## Discord bot
+1) Made a discord bot as described in setup
+2) **toxicity_wrapper.py:** Handles all the prediction related task and returns prediction for each label for a given comment. It first vectorizes the text and then passes it to the trained models. The predict function calls all the models and collects the data. The classify function puts the result as 1 or 0 by comparing it to treshold.
+3) **bot.py:** Handles
+
 
 # Pain Points and challenges
 1) **Data imbalance:** We trained the model multiple times without realizing the dataset was imbalanced. As a result, we achieved high accuracy for the "toxic" label since it had the most data and was relatively balanced. However, the other labels, particularly "threat," struggled significantly. The precision for "threat" was 0, indicating the model failed to identify any true positives and classified everything as false. This occurred because only a small number of data points were labeled as "threat," and the model failed to learn meaningful patterns for this label due to the overwhelming majority of false classifications.
