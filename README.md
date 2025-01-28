@@ -85,18 +85,24 @@ python bot.py
 - The terminal should print: 'bot name' has connected to Discord!
 
 ## After following these steps, the bot is ready to be used!
-## How to use this?
+## **How to Use This?**  
 
-1. **Send a toxic message**: `"You should kill yourself!"`
-2. **Bot Classification (happens under the hood, for example:)**: 
-   - Toxic: Yes
-   - Threat: Yes
-   - Obscene: No
-   - Insult: Yes
-   - Identity Hate: No
-3. **Bot Action**: 
-   - Deletes the message from the group chat.
-   - Sends a direct message to the user informing them why the message they've sent is toxic, i.e. in which of the 5 classifications it falls in: "Your message in general was flagged as: 'label_1','label_2'. Please adhere to the community guidelines and maintain a positive environment."
-   - However, non-toxic messages stay unaffected.
+1. **Send a Toxic Message**  
+   Example: `"You should kill yourself!"`  
+
+2. **Bot Classification (Happens Under the Hood)**  
+   For instance, the bot processes the message and classifies it as:  
+   - **Toxic**: Yes  
+   - **Threat**: Yes  
+   - **Obscene**: No  
+   - **Insult**: Yes  
+   - **Identity Hate**: No  
+
+3. **Bot Action**  
+   - **Deletes the Message**: The flagged message is removed from the group chat to maintain a positive environment.  
+   - **Notifies the User**: The bot sends a direct message to the user, explaining why their message was flagged. For example:  
+     > "Your message was flagged as: 'Toxic', 'Threat', and 'Insult'. Please adhere to the community guidelines and contribute positively to the conversation."  
+   - **Neutral or Positive Messages**: Messages that are not flagged as toxic remain unaffected and visible in the chat.  
+
 
 ---
