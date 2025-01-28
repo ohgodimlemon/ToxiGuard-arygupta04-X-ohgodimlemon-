@@ -23,12 +23,40 @@
 3) **SMOTE:** Data given is imbalanced, the SMOTE tool adds data points to balance the data for each label. Thus, we have 5 datasets, different for each label.
 4) **Sequential Model:** We have defined a binary classification model archutecture. As discussed, five models of this type will be made for each label. There are several layers, the first embedding layer converts each word into 32 dimentional vector. The bidirectional layer is important as it can process sentences in both directions and preserve its context. For example, the sentence "I don't hate you" is not toxic, but the association of the word "hate" in embedding layer is related to toxic, the word "don't" changes the context, which is what this layer takes care of. Then we have three dense or fully connected layers with Rectified Linear Unit (ReLU) function which learns features of words. This is followed by a final layer which gives probablitistic output of true or false classification for that label.
 6) **Training and Testing:** Here, datset for each label is extracted, and then split into train, test and validation before training it. A callback is defined for saving the model after each epoch for each model. This is then tested on testing data split, and results are stored in results array.
+Here’s a cleaned-up and polished version for your README file:  
 
-## Discord bot
-1) Made a discord bot as described in setup
-2) **toxicity_wrapper.py:** Handles all the prediction related task and returns prediction for each label for a given comment. It first vectorizes the text and then passes it to the trained models. The predict function calls all the models and collects the data. The classify function puts the result as 1 or 0 by comparing it to treshold.
-3) **bot.py:** Handles
+---
 
+## **Discord Bot**  
+
+### **Overview**  
+This project involves the development of a Discord bot designed to detect and manage toxic behavior in group chats. The bot uses machine learning models to classify messages and take appropriate actions to maintain a healthier online environment.  
+
+### **Key Components**  
+
+1. **toxicity_wrapper.py**  
+   - Handles all prediction-related tasks for classifying the toxicity of messages.  
+   - **Functionality:**  
+     - Vectorizes the input text for processing.  
+     - Passes the vectorized data to pre-trained machine learning models.  
+     - The `predict` function aggregates predictions from all models.  
+     - The `classify` function converts predictions into binary outcomes (1 or 0) based on predefined thresholds.  
+
+2. **bot.py**  
+   - Manages how the bot interacts with Discord servers and handles inappropriate messages.  
+   - **Features:**  
+     - Deletes flagged messages that violate community guidelines.  
+     - Sends direct warnings to users, explaining why their message was flagged.  
+     - Maintains seamless integration with Discord's API for real-time message monitoring and response.  
+
+3. **ToxiGuard.ipynb**  
+   - Implements the machine learning model used for toxicity detection.  
+   - **Workflow:**  
+     - Preprocesses and cleans the input dataset for training.  
+     - Trains and evaluates models for various categories of toxic behavior.  
+     - Stores the trained models, which are later used in `toxicity_wrapper.py`.  
+
+---
 
 # Pain Points and challenges
 1) **Data imbalance:** We trained the model multiple times without realizing the dataset was imbalanced. As a result, we achieved high accuracy for the "toxic" label since it had the most data and was relatively balanced. However, the other labels, particularly "threat," struggled significantly. The precision for "threat" was 0, indicating the model failed to identify any true positives and classified everything as false. This occurred because only a small number of data points were labeled as "threat," and the model failed to learn meaningful patterns for this label due to the overwhelming majority of false classifications.
