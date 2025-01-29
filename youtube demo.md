@@ -1,1 +1,1 @@
-(Click here to watch the demo)[https://youtu.be/Nge6_wBgy38]
+[Click here to watch the demo](https://youtu.be/Nge6_wBgy38)
