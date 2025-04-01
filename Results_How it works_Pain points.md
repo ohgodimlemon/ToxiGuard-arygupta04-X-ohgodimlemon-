@@ -64,9 +64,3 @@ This project involves the development of a Discord bot designed to detect and ma
 3) **Fixing data imbalance, training multiple models:** Earlier, we were training only one model to perform 5 classifications. We realised one model will not perform all classifications well, even after training for 7 epochs the accuracy remained 54%. This is perhaps because even if the model classifies one label wrong, the testing would make whole comment as false prediction. Instead what we realised we should test model for wach label. To solve this, we trained 5 seperate models, each trained to perform binary classification outputting weather a label is true or false. This gave us very high accuracy, precision, and recall, especially after applying SMOTE.
 4) **Multilabel classification:** The problem was in designing the whole solution, one option was to train just one model, which did not work as described. Second option was to have classes and train one model but this meant 2^5 classes possiblity which is ridiculous. The problem is that each comment can be classified in multiple label, thus, training 5 seperate model was the best option.
 
-# Future Enhancements
-
-To improve the bot's classification accuracy:
-1. Fine tune the bot for racist comments
-2. Expand the training dataset to include more real-world Discord messages.
-3. Train model for detecting toxic abbreviations
