@@ -5,7 +5,9 @@
 ~~| obscene         | 2.42% | 99.20%   | 99.24%    | 99.17%  |~~
 ~~| threat          | 0.84% | 99.76%   | 99.91%    | 99.61%  |~~
 ~~| insult          | 1.72% | 99.37%   | 99.44%    | 99.29%  |~~
-~~| identity_hate   | 0.64% | 99.77%   | 99.74%    | 99.80%  |~~
+~~| identity_hate   | 0.64% | 99.77%   | 99.74%    | 99.80%  |~~  
+
+
 EDIT: after changing and retraing for a single model, the results on testing set is:
 - **Test Loss:** 0.005
 - **Test Precision:** 0.9779
