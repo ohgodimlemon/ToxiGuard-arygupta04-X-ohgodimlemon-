@@ -20,13 +20,13 @@ When a message is found to contain harmful content, the bot deletes it and sends
 
 ## Models
 
-Each of the five models check for a specific category of harmful content:
-
+~~
 1. **Toxic**: Identifies toxic language or behavior that promotes hostility or negativity.
 2. **Obscene**: Detects obscene or inappropriate language.
 3. **Insult**: Flags language that insults or demeans others.
 4. **Threat**: Identifies threats or messages implying harm.
 5. **Identity Hate**: Detects hate speech based on someone's identity (e.g., race, gender, etc.).
+~~
 
 ## Installation
 
